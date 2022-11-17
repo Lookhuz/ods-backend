@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "name": "São Paulo",
+        "abreviation": "SP",
+        "region": 1
+    },
+    {
+        "id": 1,
+        "name": "Rio de Janeiro",
+        "abreviation": "RJ",
+        "region": 1
+    },
+    {
+        "id": 2,
+        "name": "Paraná",
+        "abreviation": "PR",
+        "region": 0
+    },
+    {
+        "id": 3,
+        "name": "Rio Grande do Sul",
+        "abreviation": "RS",
+        "region": 0
+    },
+    {
+        "id": 4,
+        "name": "Bahia",
+        "abreviation": "BA",
+        "region": 3
+    },
+    {
+        "id": 5,
+        "name": "Amazonas",
+        "abreviation": "AM",
+        "region": 2
+    },
+    {
+        "id": 6,
+        "name": "Minas Gerais",
+        "abreviation": "MG",
+        "region": 1
+    }
+]
