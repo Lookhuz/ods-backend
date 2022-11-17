@@ -10,6 +10,7 @@ app.set('env', NODE_ENV);
 app.use(logger('tiny'));
 app.use(bodyParser.json());
 app.use('/', require(path.join(__dirname, 'routes', 'stats.js')));
+app.use('/', require(path.join(__dirname, 'routes', 'ods.js')));
 app.use((req, res, next) => {
   const err = new Error(`${req.method} ${req.url} Not Found`);
   err.status = 404;
