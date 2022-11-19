@@ -2,163 +2,163 @@
     {
         "id": 0,
         "name": "Paraná",
-        "abreviation": "PR",
+        "abbreviation": "PR",
         "region": 0
     },
     {
         "id": 1,
         "name": "Rio Grande do Sul",
-        "abreviation": "RS",
+        "abbreviation": "RS",
         "region": 0
     },
     {
         "id": 2,
         "name": "Santa Catarina",
-        "abreviation": "SC",
+        "abbreviation": "SC",
         "region": 0
     },
     {
         "id": 3,
         "name": "São Paulo",
-        "abreviation": "SP",
+        "abbreviation": "SP",
         "region": 1
     },
     {
         "id": 4,
         "name": "Rio de Janeiro",
-        "abreviation": "RJ",
+        "abbreviation": "RJ",
         "region": 1
     },
     {
         "id": 5,
         "name": "Minas Gerais",
-        "abreviation": "MG",
+        "abbreviation": "MG",
         "region": 1 
     },
     {
         "id": 6,
         "name": "Espírito Santo",
-        "abreviation": "ES",
+        "abbreviation": "ES",
         "region": 1
     },
     {
         "id": 7,
         "name": "Amazonas",
-        "abreviation": "AM",
+        "abbreviation": "AM",
         "region": 2
     },
     {
         "id": 8,
         "name": "Roraima",
-        "abreviation": "RR",
+        "abbreviation": "RR",
         "region": 2 
     },
     {
         "id": 9,
         "name": "Rondônia",
-        "abreviation": "RO",
+        "abbreviation": "RO",
         "region": 2 
     },
     {
         "id": 10,
         "name": "Pará",
-        "abreviation": "PA",
+        "abbreviation": "PA",
         "region": 2
     },
     {
         "id": 11,
         "name": "Acre",
-        "abreviation": "AC",
+        "abbreviation": "AC",
         "region": 2
     },
     {
         "id": 12,
         "name": "Tocantins",
-        "abreviation": "TO",
+        "abbreviation": "TO",
         "region": 2
     },
     {
         "id": 13,
         "name": "Amapá",
-        "abreviation": "AP",
+        "abbreviation": "AP",
         "region": 2 
     },
     {
         "id": 14,
         "name": "Bahia",
-        "abreviation": "BA",
+        "abbreviation": "BA",
         "region": 3
     },
     {
         "id": 15,
         "name": "Pernambuco",
-        "abreviation": "PE",
+        "abbreviation": "PE",
         "region": 3 
     },
     {
         "id": 16,
         "name": "Piauí",
-        "abreviation": "PI",
+        "abbreviation": "PI",
         "region": 3
     },
     {
         "id": 17,
         "name": "Rio Grande do Norte",
-        "abreviation": "RN",
+        "abbreviation": "RN",
         "region": 3 
     },
     {
         "id": 18,
         "name": "Paraíba",
-        "abreviation": "PB",
+        "abbreviation": "PB",
         "region": 3 
     },
     {
         "id": 19,
         "name": "Alagoas",
-        "abreviation": "AL",
+        "abbreviation": "AL",
         "region": 3 
     },
     {
         "id": 20,
         "name": "Ceará",
-        "abreviation": "CE",
+        "abbreviation": "CE",
         "region": 3 
     },
     {
         "id": 21,
         "name": "Maranhão",
-        "abreviation": "MA",
+        "abbreviation": "MA",
         "region": 3
     },
     {
         "id": 22,
         "name": "Serjipe",
-        "abreviation": "SE",
+        "abbreviation": "SE",
         "region": 3
     },
     {
         "id": 23,
         "name": "Goiás",
-        "abreviation": "GO",
+        "abbreviation": "GO",
         "region": 4
     },
     {
         "id": 24,
         "name": "Mato Grosso do Sul",
-        "abreviation": "MS",
+        "abbreviation": "MS",
         "region": 4
     },
     {
         "id": 25,
         "name": "Mato Grosso",
-        "abreviation": "MT",
+        "abbreviation": "MT",
         "region": 4 
     },
     {
         "id": 26,
         "name": "Distrito Federal",
-        "abreviation": "DF",
+        "abbreviation": "DF",
         "region": 4
     }
 ]
