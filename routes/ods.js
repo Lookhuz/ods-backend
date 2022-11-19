@@ -23,29 +23,48 @@ const getStateById = (states, id) => {
   return statesFound[0];
 }
 
-const getByCity = (cities, states) => {
-  return cities.map((city) => {
-    const name = city.name;
-    const ods = city.ods.reduce((prev, cur) => {
-      return prev + cur;
-    }, 0) / city.ods.length;
-    const state = getStateById(states, city.state);
-    return {
-      name,
-      ods,
-      state: {
-        name: state.name,
-        abbreviation: state.abbreviation,
-      },
-    }
-  });
+const calcAverage = (ods) => {
+  return ods.reduce((prev, cur) => {
+    return prev + cur;
+  }, 0) / ods.length;
 }
 
-const getByState = () => {
-  return 0;
+const getCityOds = (city, states) => {
+  const name = city.name;
+  const ods = calcAverage(city.ods);
+  const state = getStateById(states, city.state);
+  return {
+    name,
+    ods,
+    state: {
+      name: state.name,
+      abbreviation: state.abbreviation,
+    },
+  }
 }
 
-const getByRegion = () => {
+const getCitiesOds = (cities, states) => {
+  return cities.map((city) => getCityOds(city, states));
+}
+
+const getStateOds = (state, cities) => {
+  const name = state.name;
+  const abbreviation = state.abbreviation;
+  const citiesFound = cities.filter((city) => city.state === state.id);
+  const citiesOdsValues = citiesFound.map((city) => calcAverage(city.ods));
+  const ods = calcAverage(citiesOdsValues);
+  return {
+    name,
+    abbreviation,
+    ods,
+  }
+}
+
+const getStatesOds = (states, cities) => {
+  return states.map((state) => getStateOds(state, cities));
+}
+
+const getRegionsOds = () => {
   return 0;
 }
 
@@ -56,14 +75,14 @@ const getStats = async (req, res, next) => {
     const states = JSON.parse(fs.readFileSync(path.join(__dirname, 'states.json')));
 
     const summary = getSummary(cities);
-    const city = getByCity(cities, states);
-    const state = getByState();
-    const region = getByRegion();
+    const citiesOds = getCitiesOds(cities, states);
+    const statesOds = getStatesOds(states, cities);
+    const regionsOds = getRegionsOds();
     const ods = {
       summary,
-      city,
-      state,
-      region,
+      cities: citiesOds,
+      states: statesOds,
+      regions: regionsOds,
     }
     res.json(ods);
   } catch (e) {
