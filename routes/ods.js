@@ -24,6 +24,9 @@ const getStateById = (states, id) => {
 }
 
 const calcAverage = (ods) => {
+  if (ods.length === 0) {
+    return null;
+  }
   return ods.reduce((prev, cur) => {
     return prev + cur;
   }, 0) / ods.length;
@@ -64,8 +67,19 @@ const getStatesOds = (states, cities) => {
   return states.map((state) => getStateOds(state, cities));
 }
 
-const getRegionsOds = () => {
-  return 0;
+const getRegionOds = (region, states, cities) => {
+  const name = region.name;
+  const statesFound = states.filter((state) => state.region === region.id);
+  const statesOdsValues = statesFound.map((state) => getStateOds(state, cities).ods);
+  const ods = calcAverage(statesOdsValues);
+  return {
+    name,
+    ods,
+  }
+}
+
+const getRegionsOds = (regions, states, cities) => {
+  return regions.map((region) => getRegionOds(region, states, cities));
 }
 
 
@@ -73,11 +87,12 @@ const getStats = async (req, res, next) => {
   try {
     const cities = JSON.parse(fs.readFileSync(path.join(__dirname, 'cities.json')));
     const states = JSON.parse(fs.readFileSync(path.join(__dirname, 'states.json')));
+    const regions = JSON.parse(fs.readFileSync(path.join(__dirname, 'regions.json')));
 
     const summary = getSummary(cities);
     const citiesOds = getCitiesOds(cities, states);
     const statesOds = getStatesOds(states, cities);
-    const regionsOds = getRegionsOds();
+    const regionsOds = getRegionsOds(regions, states, cities);
     const ods = {
       summary,
       cities: citiesOds,
